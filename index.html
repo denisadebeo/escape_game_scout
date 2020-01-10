@@ -31,13 +31,13 @@
       
       <hr/>
       
-      <p class="page-section-heading text-center text-uppercase text-secondary mb-0"> Merci de rentrer la composition chimique de la moyannaise:<br/><br/> Le carbone vaut 6 et l'oxygène vaut 8</p>
+      <p class="page-section-heading text-center text-uppercase text-secondary mb-0"> Merci de rentrer la composition chimique de la mayonnaise:<br/><br/> Le carbone vaut 6 et l'oxygène vaut 8</p>
       
       <hr/>
       <div class="control-group">
         <div class="form-group floating-label-form-group controls mb-0 pb-2">
           <label>Code Secret</label>
-          <input class="form-control" id="codeSecret" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+          <input class="form-control" id="codeSecret" type="text" placeholder="CODE SECRET" required="required" data-validation-required-message="Please enter your name.">
           <p class="help-block text-danger"></p>
         </div>
       </div>
@@ -55,6 +55,24 @@
       </div>
 
       <!-- Portfolio Grid Items -->
+      <div class="row" id="tobehide" >
+
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+            <label>Code Cadenas</label>
+            <p class="help-block text-danger">
+              La racine numérique d'une nombre est la somme de ces chiffres jusqu'à ce qu'il en reste 1.<br/>
+              par exemple: 339 => 3+3+9 => 15 => 1+5 => 6.<br/>
+              La racine de 339 est donc 6 <br/>
+              Le code du cadenas <br/>
+              456791<br/>
+              61277<br/>
+              138233453<br/>
+            </p>
+          </div>
+        </div>
+      
+      </div>
       <div class="row">
 
         <!-- Portfolio Item 1 -->
@@ -91,12 +109,12 @@
     $("#testCodeBtn").click(function() {
 
       if($("#codeSecret").val() =="39291184"){
-        alert( "Yalla" );
+        $("#tobehide").show();
       } else {
-        alert("non");
+        alert("Mauvais code, essaie encore");
       }
     });
-
+    $("#tobehide").hide();
   </script>
 
 </body>
